@@ -1,0 +1,133 @@
+/* statustable.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #b5e7a0; /* สีพื้นหลังของทั้งหน้าจอ */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+    min-height: 100vh; /* ความสูงขั้นต่ำของ body */
+  }
+  
+  .app-container {
+    background-color: #b5e7a0; /* สีพื้นหลัง */
+    min-height: 100vh;
+    max-width: 390px; /* ขนาดให้เหมาะกับ iPhone 15 Pro */
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* รวม padding เข้าในขนาดของ element */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #333; /* สีพื้นหลังสีดำ */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .header-title {
+    color: white;
+    font-size: 1.2em; /* ขนาดฟอนต์ของหัวเรื่อง */
+    margin: 0;
+    flex-grow: 1;
+    text-align: center; /* จัดกึ่งกลางหัวเรื่อง */
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 5px; /* ลดช่องว่างระหว่างปุ่ม */
+  }
+  
+  .header-btn {
+    background-color: #333;
+    color: white;
+    padding: 8px 16px; /* ลด padding */
+    border-radius: 8px; /* ลดขอบโค้ง */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* เพิ่มช่องว่างระหว่างการ์ด */
+  }
+  
+  .status-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .status-card:hover {
+    transform: translateY(-5px); /* ยกการ์ดขึ้นเมื่อ hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+  }
+  
+  .status-card.normal {
+    background: linear-gradient(145deg, #4caf50, #43a047); /* สีเขียวพร้อมเงา */
+  }
+  
+  .status-card.alarm {
+    background: linear-gradient(145deg, #ff7043, #f4511e); /* สีส้มพร้อมเงา */
+  }
+  
+  .status-icon {
+    width: 30px; /* เพิ่มขนาดไอคอน */
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em; /* เพิ่มขนาดฟอนต์ไอคอน */
+    margin-right: 15px;
+    color: #333;
+  }
+  
+  .status-icon.normal {
+    color: #4caf50; /* สีเขียวสำหรับ N */
+  }
+  
+  .status-icon.alarm {
+    color: #ff7043; /* สีส้มสำหรับ A */
+  }
+  
+  .status-label {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1em; /* เพิ่มขนาดฟอนต์ */
+  }
+  
+  .status-card.alarm .status-icon {
+    background-color: #ffcccb; /* พื้นหลังวงกลมสีขาวอมแดง */
+  }
+  
+  .status-card.normal .status-icon {
+    background-color: #ccffcc; /* พื้นหลังวงกลมสีขาวอมเขียว */
+  }
+  

@@ -1,0 +1,8 @@
+
+.Contaner{
+    display: grid;
+    flex-wrap: nowrap;
+}
+.Contaner-machain, .Contaner-robot-All, .Contaner-robot6axis{
+    background-color: rgb(255, 255, 255);
+}
