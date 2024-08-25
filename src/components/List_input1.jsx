@@ -15,7 +15,7 @@ function List_input1() {
     ]);
   
     useEffect(() => {
-      const socket = new WebSocket('http://localhost:8080/');
+      const socket = new WebSocket('http://localhost:8080/') || new WebSocket('http://192.168.1.34:8080/');
   
       socket.onmessage = (event) => {
         const data = JSON.parse(event.data);
